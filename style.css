@@ -1,3 +1,39 @@
  body{
    background-color: #E0C19E
  }
+
+ .top{
+   border: double;
+   border-color: #BD7D6A;
+   overflow: hidden;
+ }
+
+ .botmarg{
+   margin: 1%;
+   width: inherit;
+   border: 1px solid #BD7D6A;
+   border-bottom: 5px solid #BD7D6A;
+   background-color: #E09E7A;
+   text-align: center;
+ }
+ .minicontainer{
+   width:97%;
+   margin: 1%;
+   border: 1px solid #BD7D6A;
+   border-top: 4px solid #BD7D6A;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+ }
+ .littlebox{
+   width:20%;
+   height: 15%;
+   border: solid;
+   margin: 1%;
+   margin-top: 0;
+   float: left;
+ }
+
+ .round{
+   border-color: #BD7D6A;
+   border-radius: 5px;
+ }
