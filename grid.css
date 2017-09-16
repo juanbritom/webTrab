@@ -10,6 +10,7 @@ body {
 h4{
   margin: 0;
   grid-column: 1/5;
+  z-index: 2;
 }
 
 hr{
@@ -56,6 +57,7 @@ hr{
 .card{
   text-align: center;
   background-color: rgb(115, 237, 219);
+  z-index: 2;
 }
 
 [class*='tab-'] {
@@ -73,7 +75,7 @@ hr{
 	background: #fff;
 	opacity: 1;
 	max-width: 100%;
-	max-height: 100vh;
+	max-height: 300vh;
 	animation: show 1s;
 }
 
@@ -136,6 +138,11 @@ input:checked + label {
   grid-column: span 6;
 }
 
+.full{
+  margin:0;
+  grid-column: span 6;
+}
+
 .lsone{
   grid-column: span 2;
 }
@@ -170,7 +177,11 @@ input:checked + label {
 }
 
 .bonuses{
-  grid-row: 9;
+  grid-row: 11;
+}
+
+.persona{
+  grid-row: 18;
 }
 
 .forminput{
@@ -199,6 +210,14 @@ input:checked + label {
   border-right: 1px solid rgba(0,0,0,.25);
 }
 
+.nobot{
+  border-bottom: 0;
+}
+
+.notop{
+  border-top: 0;
+}
+
 @keyframes show {
 	0%, 20% {
 		opacity: 0;
@@ -206,7 +225,7 @@ input:checked + label {
 	}
 	100% {
 		opacity: 1;
-		max-height: 100vh;
+		max-height: 300vh;
 	}
 }
 
