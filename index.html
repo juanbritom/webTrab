@@ -6,36 +6,131 @@
   </head>
   <body>
     <div class="card">
-      <h4>Hey now you're a rockstar</h4>
-      <h4><input class="forminput" type="text" name="Character Name" placeholder="Character Name"></h4>
+      <h4><hr><object data="initialDandD.svg" type="image/svg+xml" width="90%"></object><hr></h4>
+      <h4><input class="forminput" type="text" name="Character Name" placeholder="Character Name"><hr></h4>
       <input class='hide' type="radio" id="tab-1" name="hehe" checked='checked'/>
-      <label for='tab-1'>Descrição</label>
+      <label for='tab-1'>Basics</label>
       <article class='tab-1'>
         <form class="wrapper lilbox">
-          <div class="stats">Class <br> <input class="forminput" type="text" name="Class"></div>
-          <div class="stats">Level <br> <input class="forminput" type="text" name="Level"></div>
-          <div class="stats">Player Name <br> <input class="forminput" type="text" name="PlayerName"></div>
-          <div class="stats">Race <br> <input class="forminput" type="text" name="Race"></div>
-          <div class="stats">Background <br> <input class="forminput" type="text" name="Background"></div>
-          <div class="stats">Alignment <br> <input class="forminput" type="text" name="Alignment"></div>
-          <div class="stats">Experience points <br> <input class="forminput" type="text" name="XP"></div>
+          <div class="stats">Class<br><input class="forminput" type="text" name="Class"></div>
+          <div class="stats">Level<br><input class="forminput" type="text" name="Level"></div>
+          <div class="stats">Race<br><input class="forminput" type="text" name="Race"></div>
+          <div class="stats">Background<br><input class="forminput" type="text" name="Background"></div>
+          <div class="stats">Alignment<br><input class="forminput" type="text" name="Alignment"></div>
+          <div class="stats">Experience points<br><input class="forminput" type="text" name="XP"></div>
+          <div class="stats lsthree">Player Name<br><input class="forminput" type="text" name="PlayerName"></div>
+          <div class="stats title lsthree">Status:</div>
+          <div class="stats">STR<br><input class="forminput smallinput" type="text" name="str"></div>
+          <div class="stats">DEX<br><input class="forminput smallinput" type="text" name="dex"></div>
+          <div class="stats">CON<br><input class="forminput smallinput" type="text" name="con"></div>
+          <div class="stats">INT<br><input class="forminput smallinput" type="text" name="int"></div>
+          <div class="stats">WIS<br><input class="forminput smallinput" type="text" name="wis"></div>
+          <div class="stats">CHA<br><input class="forminput smallinput" type="text" name="cha"></div>
+          <div class="stats title lsthree">Saving Throws:</div>
+          <div class="stats">STR<br><input class="forminput smallinput" type="text" name="svgstr"></div>
+          <div class="stats">DEX<br><input class="forminput smallinput" type="text" name="svgdex"></div>
+          <div class="stats">CON<br><input class="forminput smallinput" type="text" name="svgcon"></div>
+          <div class="stats">INT<br><input class="forminput smallinput" type="text" name="svgint"></div>
+          <div class="stats">WIS<br><input class="forminput smallinput" type="text" name="svgwis"></div>
+          <div class="stats">CHA<br><input class="forminput smallinput" type="text" name="svgcha"></div>
+          <div class="stats title lsthree">Hit Points:</div>
+          <div class="stats lsonehalf">Armor<br><input class="forminput" type="text" name="armor"></div>
+          <div class="stats lsonehalf">HP<br><input class="forminput" type="text" name="hp"></div>
+          <div class="stats lsonehalf">Temp. HP<br><input class="forminput" type="text" name="tempHp"></div>
+          <div class="stats lsonehalf">Hit Dice<br><input class="forminput" type="text" name="hitDice"></div>
+          <div class="stats title ls">Death Saves:</div>
+          <div class="stats">Successes<br><input class="forminput" type="text" name="deathSucs"></div>
+          <div class="stats">Failures<br><input class="forminput" type="text" name="deathFail"></div>
+          <label class="stats next basics" for="tab-2">Next Page</label>
         </form>
       </article>
 
       <input class='hide' type="radio" name="hehe" id="tab-2"/>
-      <label for='tab-2'>Atributos</label>
+      <label for='tab-2'>Skills and Attacks</label>
       <article class='tab-2'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus et atque sit dolor iusto, beatae pariatur ipsum debitis. Ab iste quasi corporis illo inventore dolore consectetur illum vero rem incidunt saepe aliquid possimus odio, est suscipit sequi? Aperiam vel sint blanditiis doloribus distinctio?
+        <form class="wrapper lilbox">
+          <div class="stats">Acrobatics<br> <input class="forminput" type="text" name="acrobatics"></div>
+          <div class="stats">Animal Handling<br> <input class="forminput" type="text" name="animalHandling"></div>
+          <div class="stats">Arcana<br> <input class="forminput" type="text" name="arcana"></div>
+          <div class="stats">Athletics<br> <input class="forminput" type="text" name="athletics"></div>
+          <div class="stats">Deception<br> <input class="forminput" type="text" name="deception"></div>
+          <div class="stats">History<br> <input class="forminput" type="text" name="history"></div>
+          <div class="stats">Insight<br> <input class="forminput" type="text" name="insight"></div>
+          <div class="stats">Intimidation<br> <input class="forminput" type="text" name="intimidation"></div>
+          <div class="stats">Investigation<br> <input class="forminput" type="text" name="invetigation"></div>
+          <div class="stats">Medicine<br> <input class="forminput" type="text" name="medicine"></div>
+          <div class="stats">Nature<br> <input class="forminput" type="text" name="nature"></div>
+          <div class="stats">Perception<br> <input class="forminput" type="text" name="perception"></div>
+          <div class="stats">Perfomance<br> <input class="forminput" type="text" name="performance"></div>
+          <div class="stats">Persuasion<br> <input class="forminput" type="text" name="persuasion"></div>
+          <div class="stats">Religion<br> <input class="forminput" type="text" name="religion"></div>
+          <div class="stats">Sleight of Hand<br> <input class="forminput" type="text" name="sleightOfHand"></div>
+          <div class="stats">Stealth<br> <input class="forminput" type="text" name="stealth"></div>
+          <div class="stats">Survival<br> <input class="forminput" type="text" name="survival"></div>
+          <div class="stats title lsthree">Attacks and Spellcasting</div>
+          <div class="stats lsthree"><br>
+            <table class="tg" align="center">
+              <tr>
+                <th class="tg-hnao">Name</th>
+                <th class="tg-kr94">Atk Bonus</th>
+                <th class="tg-kr94">Damage/Type</th>
+              </tr>
+              <tr>
+                <td class="tg-kr94"><hr><input class="forminput tableinput" type="text" name="name1"></td>
+                <td class="tg-kr94"><hr><input class="forminput smallinput tableinput" type="text" name="atkBonus1"></td>
+                <td class="tg-kr94"><hr><input class="forminput tableinput" type="text" name="dmgType1"></td>
+              </tr>
+              <tr>
+                <td class="tg-s6z2"><input class="forminput tableinput" type="text" name="name2"></td>
+                <td class="tg-s6z2"><input class="forminput smallinput tableinput" type="text" name="atkBonus2"></td>
+                <td class="tg-s6z2"><input class="forminput tableinput" type="text" name="dmgType2"></td>
+              </tr>
+              <tr>
+                <td class="tg-s6z2"><input class="forminput tableinput" type="text" name="name3"></td>
+                <td class="tg-s6z2"><input class="forminput smallinput tableinput" type="text" name="atkBonus3"></td>
+                <td class="tg-s6z2"><input class="forminput tableinput" type="text" name="dmgType3"></td>
+              </tr>
+              <tr>
+                <td class="tg-s6z2"><input class="forminput tableinput" type="text" name="name4"></td>
+                <td class="tg-s6z2"><input class="forminput smallinput tableinput" type="text" name="atkBonus4"></td>
+                <td class="tg-s6z2"><input class="forminput tableinput" type="text" name="dmgType4"></td>
+              </tr>
+              <tr>
+                <td class="tg-s6z2"><input class="forminput tableinput" type="text" name="name5"></td>
+                <td class="tg-s6z2"><input class="forminput smallinput tableinput" type="text" name="atkBonus5"></td>
+                <td class="tg-s6z2"><input class="forminput tableinput" type="text" name="dmgType5"></td>
+              </tr>
+            </table>
+          </div>
+
+          <label class="stats prev skills" for="tab-1">Prev page</label>
+          <label class="stats next skills" for="tab-3">Next Page</label>
+        </form>
       </article>
 
       <input class='hide' type="radio" name="hehe" id="tab-3"/>
-      <label for='tab-3'>Tab 3</label>
+      <label for='tab-3'>Bunuses and Equipments</label>
       <article class='tab-3'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt tempore beatae enim, aliquam, iusto cupiditate aspernatur neque quisquam, quibusdam omnis culpa veritatis cumque ea quo voluptatibus amet iure eaque. Vero quas, at.
+        <form class="wrapper lilbox">
+          <div class="stats">Passive Wisdom<br><input class="forminput" type="text" name="passiveWIS"></div>
+          <div class="stats">Inspiration<br><input class="forminput" type="text" name="inspiration"></div>
+          <div class="stats">Proficiency bonus<br> <input class="forminput" type="text" name="bonusProficiency"></div>
+          <div class="stats lsthree">Proeficiency<br> <textarea class="biginput" type="text" name="proeficiency"></textarea></div>
+          <div class="stats lsthree">Languages<br> <textarea class="biginput" type="text" name="languages"></textarea><br></div>
+          <div class="stats title lsthree">Equipments</div>
+          <div class="stats">CP<br><input class="forminput smallinput" type="text" name="cp"></div>
+          <div class="stats">SP<br><input class="forminput smallinput" type="text" name="sp"></div>
+          <div class="stats">EP<br><input class="forminput smallinput" type="text" name="ep"></div>
+          <div class="stats lsonehalf">GP<br><input class="forminput smallinput" type="text" name="gp"></div>
+          <div class="stats lsonehalf">PP<br><input class="forminput smallinput" type="text" name="pp"></div>
+          <div class="stats lsthree">Extra<br> <textarea class="biginput" type="text" name="extraEquips"></textarea><br></div>
+          <label class="stats prev bonuses" for="tab-2">Prev page</label>
+          <label class="stats next bonuses" for="tab-4">Next Page</label>
+        </form>
       </article>
 
       <input class='hide' type="radio" name="hehe" id="tab-4"/>
-      <label for='tab-4'>Tab 4</label>
+      <label for='tab-4'>Personality and Traits</label>
       <article class='tab-4'>
         Lorem ipsum.
       </article>
