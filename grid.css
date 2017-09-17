@@ -17,6 +17,10 @@ hr{
   border-color: rgba(0,0,0,0.1);
 }
 
+.logo{
+  max-width: 300px;
+}
+
 .card{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -109,6 +113,7 @@ input:checked + label {
 	background: rgba(0,0,0,.15);
 }
 
+
 .wrapper{
   width: 100%;
   margin-left: 4px;
@@ -194,7 +199,7 @@ input:checked + label {
 
 .biginput{
   width: 80%;
-  height: 50px;
+  height: 80%;
   border: 1px solid rgba(0,0,0,.25);
   border-top: 0;
   border-bottom: 2px solid rgba(0,0,0,.25);

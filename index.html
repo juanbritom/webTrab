@@ -6,23 +6,37 @@
     <style>
       @media screen and (min-width:768px){
         .wrapper{
+          grid-gap: 5px;
           grid-template-columns: repeat(14, 1fr);
           grid-auto-flow: dense;
         }
 
+        .zerogaps{
+          grid-gap: 0;
+        }
         .stats{
           grid-column: span 2;
         }
-
         .next{
           grid-column: 13/15;
         }
         .basics{
           grid-row: 6;
         }
-
         .skills{
-          grid-row: 6;
+          grid-row: 3;
+        }
+
+        .bonuses{
+          grid-row: 10;
+        }
+
+        .persona{
+          grid-row: 3;
+        }
+        .full{
+            margin: 0;
+            grid-column: span 14;
         }
         /*basics*/
 
@@ -44,22 +58,98 @@
         }
 
         /*bonusesandequips*/
-        .full{
-            margin: 0;
-            grid-column: span 14;
+        .equipadjust{
+          grid-template-columns: repeat(7,fr);
+          grid-column: span 7;
+          grid-gap: 0;
+        }
+        .equipadjustwrapper{
+          grid-template-columns: repeat(7,fr);
+          grid-column: span 7;
+          grid-row: span 9;
+          grid-gap: 0;
         }
 
+        .equipadjust2{
+          grid-row: 2/7;
+          grid-column: 3/15;
+        }
+
+        .equipadjust3{
+          grid-row: 1/7;
+          grid-column: 4/15;
+        }
+        .equipadjust4{
+          grid-row: 7/13;
+          grid-column: 4/15;
+        }
+
+        .equipadjust5{
+          grid-row: 2/7;
+          grid-column: 4/15;
+        }
+
+        .eqpside{
+          grid-column:1/3;
+        }
+
+        .eqpside2{
+          grid-row: span 4;
+          grid-column:1/4;
+        }
+        .treasure{
+          grid-column: 8/15;
+          grid-row: span 8;
+        }
+
+        /*personaandtraits*/
+        .appearance{
+          grid-gap: 0;
+          grid-column: 1/10;
+          grid-row-start: 1;
+        }
+
+        .appadjust{
+          grid-column: 5/15;
+          grid-row: 2/5;
+        }
+        .side2{
+          grid-column: span 2;
+        }
+
+        .textboxescont{
+          grid-column: 10/15;
+          grid-row: 1/10;
+        }
+
+        .textbox{
+          grid-column: span 14;
+          grid-row: span 3;
+        }
+
+        .factioncont{
+          grid-gap: 0;
+          grid-column: 1/10;
+        }
+
+      }
+
+      @media screen and (min-width: 1280px){
+        .mainwrapper{
+          width: 1280px;
+          margin: 0 auto;
+        }
       }
     </style>
   </head>
   <body>
     <div class="card">
-      <h4><hr><object data="initialDandD.svg" type="image/svg+xml" width="90%" max-width=500px></object><hr></h4>
+      <h4><hr><object class="logo" data="initialDandD.svg" type="image/svg+xml" width="90%"></object><hr></h4>
       <h4><input class="forminput" type="text" name="Character Name" placeholder="Character Name"><hr></h4>
-      <input class='hide' type="radio" id="tab-1" name="hehe" checked='checked'/>
+      <input class='hide' type="radio" id="tab-1" name="hehe"  checked='checked'/>
       <label for='tab-1'>Basics</label>
       <article class='tab-1'>
-        <form class="wrapper lilbox">
+        <form class="wrapper mainwrapper lilbox">
           <div class="wrapper full">
             <div class="stats">Class<br><input class="forminput" type="text" name="Class"></div>
             <div class="stats">Level<br><input class="forminput" type="text" name="Level"></div>
@@ -69,7 +159,7 @@
             <div class="stats">Experience points<br><input class="forminput" type="text" name="XP"></div>
             <div class="stats lsthree">Player Name<br><input class="forminput" type="text" name="PlayerName"></div>
           </div>
-          <div class="wrapper full">
+          <div class="wrapper full zerogaps">
             <div class="stats title lsthree">Status</div>
             <div class="stats">STR<br><input class="forminput smallinput" type="text" name="str"></div>
             <div class="stats">DEX<br><input class="forminput smallinput" type="text" name="dex"></div>
@@ -78,7 +168,7 @@
             <div class="stats">WIS<br><input class="forminput smallinput" type="text" name="wis"></div>
             <div class="stats">CHA<br><input class="forminput smallinput" type="text" name="cha"></div>
           </div>
-          <div class="wrapper full">
+          <div class="wrapper full zerogaps">
             <div class="stats title lsthree">Saving Throws</div>
             <div class="stats">STR<br><input class="forminput smallinput" type="text" name="svgstr"></div>
             <div class="stats">DEX<br><input class="forminput smallinput" type="text" name="svgdex"></div>
@@ -87,14 +177,14 @@
             <div class="stats">WIS<br><input class="forminput smallinput" type="text" name="svgwis"></div>
             <div class="stats">CHA<br><input class="forminput smallinput" type="text" name="svgcha"></div>
           </div>
-          <div class="wrapper full">
+          <div class="wrapper full zerogaps">
             <div class="stats title lsthree">Hit Points:</div>
             <div class="stats lsonehalf">Armor<br><input class="forminput" type="text" name="armor"></div>
             <div class="stats lsonehalf">HP<br><input class="forminput" type="text" name="hp"></div>
             <div class="stats lsonehalf">Temp. HP<br><input class="forminput" type="text" name="tempHp"></div>
             <div class="stats lsonehalf">Hit Dice<br><input class="forminput" type="text" name="hitDice"></div>
           </div>
-          <div class="wrapper full">
+          <div class="wrapper full zerogaps">
             <div class="stats title">Death Saves:</div>
             <div class="stats">Successes<br><input class="forminput" type="text" name="deathSucs"></div>
             <div class="stats">Failures<br><input class="forminput" type="text" name="deathFail"></div>
@@ -106,7 +196,7 @@
       <input class='hide' type="radio" name="hehe" id="tab-2"/>
       <label for='tab-2'>Skills and Attacks</label>
       <article class='tab-2'>
-        <form class="wrapper lilbox">
+        <form class="wrapper mainwrapper lilbox">
           <div class="wrapper full">
             <div class="stats">Acrobatics<br> <input class="forminput" type="text" name="acrobatics"></div>
             <div class="stats">Animal Handling<br> <input class="forminput" type="text" name="animalHandling"></div>
@@ -127,7 +217,7 @@
             <div class="stats skladjust1">Stealth<br> <input class="forminput" type="text" name="stealth"></div>
             <div class="stats skladjust2">Survival<br> <input class="forminput" type="text" name="survival"></div>
           </div>
-          <div class="wrapper full">
+          <div class="wrapper full zerogaps">
             <div class="stats title lsthree atkadjust1">Attacks and Spellcasting</div>
             <div class="stats lsthree atkadjust2"><br>
               <table class="tg" align="center">
@@ -173,27 +263,27 @@
       <input class='hide' type="radio" name="hehe" id="tab-3"/>
       <label for='tab-3'>Bonuses and Equipments</label>
       <article class='tab-3'>
-        <form class="wrapper lilbox">
-          <div class="wrapper full">
-            <div class="stats">Passive Wisdom<br><input class="forminput" type="text" name="passiveWIS"></div>
-            <div class="stats">Inspiration<br><input class="forminput" type="text" name="inspiration"></div>
-            <div class="stats">Proficiency bonus<br> <input class="forminput" type="text" name="bonusProficiency"></div>
-            <div class="stats full">Proeficiencies<br> <textarea class="biginput" type="text" name="proeficiencies"></textarea></div>
-            <div class="stats full">Languages<br> <textarea class="biginput" type="text" name="languages"></textarea><br></div>
+        <form class="wrapper mainwrapper lilbox">
+          <div class="wrapper full equipadjustwrapper">
+            <div class="stats eqpside2">Passive Wisdom<br><input class="forminput" type="text" name="passiveWIS"></div>
+            <div class="stats eqpside2">Inspiration<br><input class="forminput" type="text" name="inspiration"></div>
+            <div class="stats eqpside2">Proficiency bonus<br> <input class="forminput" type="text" name="bonusProficiency"></div>
+            <div class="stats lsthree equipadjust3">Proeficiencies<br> <textarea class="biginput" type="text" name="proeficiencies"></textarea></div>
+            <div class="stats lsthree equipadjust4">Languages<br> <textarea class="biginput" type="text" name="languages"></textarea><br></div>
           </div>
-          <div class="wrapper full">
-            <div class="stats title lsthree">Equipments</div>
-            <div class="stats">CP<br><input class="forminput smallinput" type="text" name="cp"></div>
-            <div class="stats">SP<br><input class="forminput smallinput" type="text" name="sp"></div>
-            <div class="stats">EP<br><input class="forminput smallinput" type="text" name="ep"></div>
-            <div class="stats lsonehalf">GP<br><input class="forminput smallinput" type="text" name="gp"></div>
-            <div class="stats lsonehalf">PP<br><input class="forminput smallinput" type="text" name="pp"></div>
-            <div class="stats full"><br> <textarea class="biginput" type="text" name="extraEquips"></textarea><br></div>
+          <div class="wrapper full equipadjust">
+            <div class="stats full title">Equipments</div>
+            <div class="stats eqpside">CP<br><input class="forminput smallinput" type="text" name="cp"></div>
+            <div class="stats eqpside">SP<br><input class="forminput smallinput" type="text" name="sp"></div>
+            <div class="stats eqpside">EP<br><input class="forminput smallinput" type="text" name="ep"></div>
+            <div class="stats eqpside lsonehalf">GP<br><input class="forminput smallinput" type="text" name="gp"></div>
+            <div class="stats eqpside lsonehalf">PP<br><input class="forminput smallinput" type="text" name="pp"></div>
+            <div class="stats lsthree equipadjust2"><br> <textarea class="biginput" type="text" name="extraEquips"></textarea><br></div>
           </div>
-          <div class="wrapper full">
-            <div class="stats title lsthree">Treasure</div>
-            <div class="stats lsthree">Total non-consumable magic items<br><input class="forminput smallinput" type="text" name="magicItemsNumber"></div>
-            <div class="stats full"><textarea class="biginput" type="text" name="extraEquips"></textarea><br></div>
+          <div class="wrapper full equipadjust treasure">
+            <div class="stats title lsthree full">Treasure</div>
+            <div class="stats lsthree eqpside2">Total non-consumable magic items<br><input class="forminput smallinput" type="text" name="magicItemsNumber"></div>
+            <div class="stats full equipadjust5"><textarea class="biginput" type="text" name="extraEquips"></textarea><br></div>
           </div>
           <label class="stats prev bonuses" for="tab-2">Prev page</label>
           <label class="stats next bonuses" for="tab-4">Next Page</label>
@@ -203,33 +293,31 @@
       <input class='hide' type="radio" name="hehe" id="tab-4"/>
       <label for='tab-4'>Personality and Traits</label>
       <article class='tab-4'>
-        <form class="wrapper lilbox">
-          <div class="wrapper full">
-            <div class="stats lsthree">Personality Traits<br><textarea class="biginput" type="text" name="personaTraits"></textarea></div>
-            <div class="stats lsthree">Ideals<br><textarea class="biginput" type="text" name="ideals"></textarea></div>
-            <div class="stats lsthree">Bonds<br><textarea class="biginput" type="text" name="bonds"></textarea></div>
+        <form class="wrapper mainwrapper lilbox">
+          <div class="wrapper full textboxescont">
+            <div class="stats lsthree full textbox">Personality Traits<br><textarea class="biginput" type="text" name="personaTraits"></textarea></div>
+            <div class="stats lsthree full textbox">Ideals<br><textarea class="biginput" type="text" name="ideals"></textarea></div>
+            <div class="stats lsthree full textbox">Bonds<br><textarea class="biginput" type="text" name="bonds"></textarea></div>
+            <div class="stats lsthree full textbox">Flaws<br><textarea class="biginput" type="text" name="flaws"></textarea></div>
+            <div class="stats lsthree full textbox">Features and Traits<br><textarea class="biginput" type="text" name="featsAndTraits"></textarea></div>
+            <div class="stats lsthree full textbox">Character Backstory<br><textarea class="biginput" type="text" name="backstory"></textarea></div>
           </div>
-          <div class="wrapper full">
-            <div class="stats lsthree">Flaws<br><textarea class="biginput" type="text" name="flaws"></textarea></div>
-            <div class="stats lsthree">Features and Traits<br><textarea class="biginput" type="text" name="featsAndTraits"></textarea></div>
-            <div class="stats lsthree">Character Backstory<br><textarea class="biginput" type="text" name="backstory"></textarea></div>
+          <div class="wrapper full appearance">
+            <div class="stats title lsthree full">Appearance</div>
+            <div class="stats lsthree appadjust"><img src="http://via.placeholder.com/300x300"></div>
+            <div class="stats side2">Age<br><input class="forminput smallinput" type="text" name="age"></div>
+            <div class="stats side2">Eyes<br><input class="forminput" type="text" name="eyes"></div>
+            <div class="stats side2">Hair<br><input class="forminput" type="text" name="hair"></div>
+            <div class="stats side2">Height<br><input class="forminput smallinput" type="text" name="height"></div>
+            <div class="stats side2">Weight<br><input class="forminput smallinput" type="text" name="weight"></div>
+            <div class="stats side2">Skin<br><input class="forminput" type="text" name="skin"></div>
           </div>
-          <div class="wrapper full">
-            <div class="stats title lsthree">Appearance</div>
-            <div class="stats lsthree"><img src="http://via.placeholder.com/300x300"></div>
-            <div class="stats">Age<br><input class="forminput smallinput" type="text" name="age"></div>
-            <div class="stats">Eyes<br><input class="forminput" type="text" name="eyes"></div>
-            <div class="stats">Hair<br><input class="forminput" type="text" name="hair"></div>
-            <div class="stats">Height<br><input class="forminput smallinput" type="text" name="height"></div>
-            <div class="stats">Weight<br><input class="forminput smallinput" type="text" name="weight"></div>
-            <div class="stats">Skin<br><input class="forminput" type="text" name="skin"></div>
-          </div>
-          <div class="wrapper full">
-            <div class="stats title lsthree">Faction</div>
-            <div class="stats lsthree"><input class="forminput" type="text" name="factionName"></div>
-            <div class="stats lsthree nobot"><img src="http://via.placeholder.com/300x300"></div>
-            <div class="stats lsthree notop"><textarea class="biginput" type="text" name="factionDescription"></textarea></div>
-            <div class="stats lsthree">Additional Features and Traits<br><textarea class="biginput" type="text" name="backstory"></textarea></div>
+          <div class="wrapper full factioncont">
+            <div class="stats title lsthree full">Faction</div>
+            <div class="stats lsthree full"><input class="forminput" type="text" name="factionName"></div>
+            <div class="stats lsthree nobot full"><img src="http://via.placeholder.com/200x200"></div>
+            <div class="stats lsthree notop full"><textarea class="biginput" type="text" name="factionDescription"></textarea></div>
+            <div class="stats lsthree full">Additional Features and Traits<br><textarea class="biginput" type="text" name="backstory"></textarea></div>
           </div>
           <label class="stats prev persona" for="tab-3">Prev page</label>
         </form>
